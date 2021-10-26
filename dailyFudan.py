@@ -154,7 +154,7 @@ class Zlapp(Fudan):
         response = self.session.get(img_src)
         image = response.content
         ocr = ddddocr.DdddOcr()
-        res = orc.classification(image)
+        res = ocr.classification(image)
         self.code = res
 
     def checkin(self):
