@@ -182,7 +182,7 @@ class Zlapp(Fudan):
                     "city"    : city,
                     "area"    : " ".join(set((province, city, district))),
                     "ismoved" : 0,
-                    "sfzx": 1,
+                    "sfzx": 0,
                     "code" : self.code
                 }
         )
