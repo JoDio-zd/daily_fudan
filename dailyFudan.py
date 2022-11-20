@@ -94,7 +94,8 @@ class Fudan:
                 self.url_login,
                 data=data,
                 headers=headers,
-                allow_redirects=False)
+                allow_redirects=False,
+                verify=False)
 
         logging.debug("return status code %d" % post.status_code)
 
@@ -201,7 +202,8 @@ class Zlapp(Fudan):
                 'https://zlapp.fudan.edu.cn/ncov/wap/fudan/save',
                 data=self.last_info,
                 headers=headers,
-                allow_redirects=False)
+                allow_redirects=False,
+                verify=False)
 
         save_msg = json_loads(save.text)["m"]
         logging.info(save_msg)
